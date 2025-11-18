@@ -1,16 +1,20 @@
 import type { Entrada } from "../types/entrada";
 import Comments from "./Comments";
 import PostContent from "./PostContent";
+import RelatedPosts from "./RelatedPosts";
 
 interface BlogPostProps {
-    entrada : Entrada
+    entradaMostrada : Entrada,
+    listadoEntradas: Entrada[]
 };
 
-function BlogPost( {entrada} : BlogPostProps) {
+function BlogPost( {entradaMostrada, listadoEntradas} : BlogPostProps) {
+    const entradasRelacionadas :Entrada[] = listadoEntradas.filter(entrada => entradaMostrada.idsEntradasRelacionadas.includes(entrada.id) )
     return (
     <article className="blog-post">
-        <PostContent entrada={entrada} />
-        <Comments comentarios={entrada.comentarios} />
+        <PostContent entrada={entradaMostrada} />
+        <Comments comentarios={entradaMostrada.comentarios} />
+        <RelatedPosts entradasRelacionadas={entradasRelacionadas}/>
     </article>)
 }
 

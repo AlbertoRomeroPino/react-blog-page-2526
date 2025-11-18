@@ -13,7 +13,7 @@ const App = () => {
     <div className="app-container">
       <Header />
       <main className="main-content">
-        <BlogPost entrada={entrada} />
+        <BlogPost entradaMostrada={entrada} listadoEntradas={entradas} />
       </main>
       <Footer />
     </div>
