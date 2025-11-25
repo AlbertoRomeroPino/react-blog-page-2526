@@ -10,4 +10,12 @@
   margin: 3px;
   display: inline-block;
   font-size: 0.9em;
+  cursor:pointer;
 }
+
+.tag-cloud__container span.etiqueta-seleccionada {
+  border: 2px solid #333;
+  color: #e9ecef;
+  background-color: #777;
+}
+
