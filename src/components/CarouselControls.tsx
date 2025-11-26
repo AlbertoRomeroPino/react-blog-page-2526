@@ -1,9 +1,10 @@
 interface CarouselControlsProps {
   indiceActivo: number,
-  setIndiceActivo: React.Dispatch<React.SetStateAction<number>>
+  setIndiceActivo: React.Dispatch<React.SetStateAction<number>>,
+  ciclo: boolean
 }
 
-function CarouselControls( { indiceActivo, setIndiceActivo } : CarouselControlsProps) {
+function CarouselControls( { indiceActivo, setIndiceActivo, ciclo = true } : CarouselControlsProps) {
 
   function handleLeftClick(){
       setIndiceActivo(indiceActivo -1);
