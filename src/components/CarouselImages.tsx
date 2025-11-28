@@ -1,6 +1,6 @@
 interface CarouselImagesProps {
-  imagenes: string[],
-  indiceActivo: number
+  imagenes: string[];
+  indiceActivo: number;
 }
 
 function CarouselImages({ imagenes, indiceActivo }: CarouselImagesProps) {
@@ -9,7 +9,11 @@ function CarouselImages({ imagenes, indiceActivo }: CarouselImagesProps) {
       {imagenes.map((imagen, indice) => (
         <img
           key={indice}
-          className={ indice == indiceActivo? "carousel-image active" : "carousel-image inactive" }
+          className={
+            indice == indiceActivo
+              ? "carousel-image active"
+              : "carousel-image inactive"
+          }
           src={imagen}
         />
       ))}
