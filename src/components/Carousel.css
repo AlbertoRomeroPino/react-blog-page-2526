@@ -54,6 +54,11 @@
   background: rgba(255,255,255,0.4);
 }
 
+.carousel-btn-inactivo {
+  opacity: 0;
+  cursor:auto
+}
+
 .carousel-indicators {
   position: absolute;
   bottom: 12px;

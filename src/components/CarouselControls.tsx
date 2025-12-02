@@ -33,10 +33,10 @@ function CarouselControls({
 
   return (
     <div className="carousel-controls">
-      <button className="carousel-btn" onClick={handleLeftClick}>
+      <button className={`carousel-btn ${!ciclo && indiceActivo == 0 && "carousel-btn-inactivo"}`} onClick={handleLeftClick}>
         &lt;
       </button>
-      <button className="carousel-btn" onClick={handleRightClick}>
+      <button className={`carousel-btn ${!ciclo && indiceActivo == cantidadImagenes - 1 && "carousel-btn-inactivo"}`} onClick={handleRightClick}>
         &gt;
       </button>
     </div>

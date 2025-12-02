@@ -12,8 +12,7 @@ function CarouselIndicators({ indiceActivo, setIndiceActivo, cantidadImagenes } 
   const indicadores = []
 
   for (let i = 0; i < cantidadImagenes; i++) {
-
-      indicadores.push(<span className={`indicator-dot ${indiceActivo == i && "active"}`} onClick={() => handleClick(i)}></span>)
+      indicadores.push(<span key={i} className={`indicator-dot ${indiceActivo == i && "active"}`} onClick={() => handleClick(i)}></span>)
   }
 
   return (
